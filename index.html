@@ -129,6 +129,27 @@
         function closeImg() {
             document.getElementById('lightbox').style.display = 'none';
         }
-    </script>
+    </script> <section id="contact" style="padding: 40px 20px; text-align: center; font-family: sans-serif; background-color: #f9f9f9;">
+    <h2 style="color: #00695c; margin-bottom: 20px;">📩 تواصل معي مباشرة</h2>
+    <p style="color: #666; margin-bottom: 30px;">إذا كان لديك أي استفسار أو تود العمل معي، يمكنك إرسال رسالة من هنا.</p>
+    
+    <form action="https://formspree.io/f/your_id" method="POST" style="display: flex; flex-direction: column; max-width: 500px; margin: auto; gap: 15px; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        
+        <input type="text" name="name" placeholder="اسمك الكامل" required 
+               style="padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none; text-align: right;">
+        
+        <input type="email" name="email" placeholder="بريدك الإلكتروني" required 
+               style="padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none; text-align: right;">
+        
+        <textarea name="message" placeholder="اكتب رسالتك هنا..." required 
+                  style="padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none; height: 120px; text-align: right; resize: vertical;"></textarea>
+        
+        <button type="submit" 
+                style="padding: 15px; background-color: #00695c; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; font-weight: bold; transition: 0.3s;">
+            إرسال الرسالة الآن
+        </button>
+        
+    </form>
+</section>
 </body>
 </html>
