@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أحمد - مطور ويب</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; background-color: #f4f4f9; color: #333; margin: 0; padding: 20px; transition: all 0.3s; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .section-title { color: #2c3e50; border-bottom: 2px solid #3498db; display: inline-block; padding-bottom: 5px; margin-top: 30px; }
+        .skills-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .skills-list li { background: #3498db; color: white; padding: 8px 15px; border-radius: 20px; font-size: 14px; }
+        .btn-lang { position: fixed; top: 20px; left: 20px; background: #333; color: white; border: none; padding: 10px 20px; border-radius: 30px; cursor: pointer; font-weight: bold; z-index: 1000; }
+        .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
+        .gallery img { width: 280px; height: 200px; object-fit: cover; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .contact-btn { padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 8px; color: white; transition: 0.3s; }
+    </style>
+</head>
+<body>
+
+    <button class="btn-lang" onclick="toggleLanguage()" id="langBtn">English</button>
+
+    <div class="container">
+        <h1 id="name">أحمد</h1>
+        <p id="bio">مطور ويب طموح، أتعلم بناء المواقع باستخدام HTML و CSS، وأسعى دائماً لتطوير مهاراتي الرقمية.</p>
+
+        <h2 class="section-title" id="skills-title">🛠️ مهاراتي</h2>
+        <ul class="skills-list">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>GitHub</li>
+            <li id="web-design">تصميم المواقع</li>
+        </ul>
+
+        <h2 class="section-title" id="gallery-title">🖼️ معرض الصور</h2>
+        <div class="gallery">
+            <img src="1.jpg" alt="Work 1">
+            <img src="2.jpg" alt="Work 2">
+        </div>
+
+        <h2 class="section-title" id="map-title">📍 موقعي في ذيبان</h2>
+        <div style="width: 100%; height: 350px; border-radius: 20px; overflow: hidden; margin: 20px 0; border: 1px solid #ddd;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3408.318!2d35.832324!3d31.522011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDMxJzE5LjIiTiAzNcKwNDknNTYuNCJF!5e0!3m2!1sar!2sjo!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 30px;">
+            <a id="dir-btn" href="https://www.google.com/maps/dir/?api=1&destination=31.522011,35.832324" target="_blank" class="contact-btn" style="background: #4285F4; display: inline-flex;">
+                📍 تحديد الطريق إلى منزلي
+            </a>
+        </div>
+
+        <h2 class="section-title" id="contact-title">📲 تواصل معي</h2>
+        <div style="display: flex; justify-content: center; gap: 15px; margin-top: 20px; flex-wrap: wrap;">
+            <a id="wa-btn" href="https://wa.me/962778555522" target="_blank" class="contact-btn" style="background: #25D366;">🟢 واتساب</a>
+            <a id="fb-btn" href="https://www.facebook.com/share/1JqDCCfSvf/" target="_blank" class="contact-btn" style="background: #1877F2;">🔵 فيسبوك</a>
+        </div>
+    </div>
+
+    <script>
+        let currentLang = 'ar';
+        function toggleLanguage() {
+            if (currentLang === 'ar') {
+                document.documentElement.dir = 'ltr';
+                document.documentElement.lang = 'en';
+                document.getElementById('name').innerText = 'Ahmed';
+                document.getElementById('bio').innerText = 'Ambitious Web Developer, learning HTML & CSS, constantly seeking to improve my digital skills.';
+                document.getElementById('skills-title').innerText = '🛠️ My Skills';
+                document.getElementById('web-design').innerText = 'Web Design';
+                document.getElementById('gallery-title').innerText = '🖼️ Gallery';
+                document.getElementById('map-title').innerText = '📍 My Location in Dhiban';
+                document.getElementById('dir-btn').innerText = '📍 Get Directions to My Home';
+                document.getElementById('contact-title').innerText = '📲 Contact Me';
+                document.getElementById('wa-btn').innerText = '🟢 WhatsApp';
+                document.getElementById('fb-btn').innerText = '🔵 Facebook';
+                document.getElementById('langBtn').innerText = 'العربية';
+                currentLang = 'en';
+            } else {
+                document.documentElement.dir = 'rtl';
+                document.documentElement.lang = 'ar';
+                document.getElementById('name').innerText = 'أحمد';
+                document.getElementById('bio').innerText = 'مطور ويب طموح، أتعلم بناء المواقع باستخدام HTML و CSS، وأسعى دائماً لتطوير مهاراتي الرقمية.';
+                document.getElementById('skills-title').innerText = '🛠️ مهاراتي';
+                document.getElementById('web-design').innerText = 'تصميم المواقع';
+                document.getElementById('gallery-title').innerText = '🖼️ معرض الصور';
+                document.getElementById('map-title').innerText = '📍 موقعي في ذيبان';
+                document.getElementById('dir-btn').innerText = '📍 تحديد الطريق إلى منزلي';
+                document.getElementById('contact-title').innerText = '📲 تواصل معي';
+                document.getElementById('wa-btn').innerText = '🟢 واتساب';
+                document.getElementById('fb-btn').innerText = '🔵 فيسبوك';
+                document.getElementById('langBtn').innerText = 'English';
+                currentLang = 'ar';
+            }
+        }
+    </script>
+</body>
+</html>
